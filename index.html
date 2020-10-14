@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <style>
+    #select,#button{
+      width: 175px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <input type="number" name="" id="number-1"><br>
+  <select name="" id="select">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">X</option>
+    <option value="/">/</option>
+  </select><br>
+  <input type="number" name="" id="number-2"><br>
+  <button id="button">=</button>
+  <h1>Result</h1>
+  <script>
+
+    document.querySelector("#button").addEventListener("click",function(){
+      var numberone =Number(document.querySelector("#number-1").value);
+      var numbertwo =Number(document.querySelector("#number-2").value);
+      var select= document.querySelector("#select").value;
+      
+      if(select ==="+"){
+        document.querySelector("h1").innerText=numberone+numbertwo;
+      }else if (select ==="-") {
+        document.querySelector("h1").innerText=numberone-numbertwo;v
+      }else if (select ==="/") {
+        document.querySelector("h1").innerText=numberone/numbertwo;v
+      }else if (select ==="*") {
+        document.querySelector("h1").innerText=numberone*numbertwo;v
+      };
+
+    });
+
+  </script>
+</body>
+</html>
